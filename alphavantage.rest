@@ -1,0 +1,46 @@
+{
+    "query":{
+        "#path":[
+            "https://www.alphavantage.co/query"
+        ],
+        "Meta Data":{
+            "1. Information":"VarChar(84)",
+            "2. Symbol":"VarChar(64),#key",
+            "3. Last Refreshed":"Timestamp(0)",
+            "4. Interval":"VarChar(64)",
+            "5. Output Size":"VarChar(64)",
+            "6. Time Zone":"VarChar(64)"
+        },
+        "Time Series (1min){Timestamp(0)}":{
+            "1. open":"Double",
+            "2. high":"Double",
+            "3. low":"Double",
+            "4. close":"Double",
+            "5. volume":"Integer"
+        },
+        "function":{
+            "#type":"VarChar(64),#key",
+            "#virtual":true,
+            "#default":"TIME_SERIES_INTRADAY",
+            "#eq":"function"
+        },
+        "symbol":{
+            "#type":"VarChar(64),#key",
+            "#virtual":true,
+            "#default":"MSFT",
+            "#eq":"symbol"
+        },
+        "interval":{
+            "#type":"VarChar(64),#key",
+            "#virtual":true,
+            "#default":"1min",
+            "#eq":"interval"
+        },
+        "apikey":{
+            "#type":"VarChar(64),#key",
+            "#virtual":true,
+            "#default":"Enter Your API Key Here",
+            "#eq":"apikey"
+        }
+    }
+}

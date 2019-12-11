@@ -1,0 +1,11 @@
+{
+        "name": "source_autorest",
+        "config": {
+                "connector.class": "io.confluent.connect.jdbc.JdbcSourceConnector",
+                "connection.url": "jdbc:datadirect:autorest:config=/Users/fanrui/Kafka/confluent-5.3.1/alphavantage.rest",
+                "query": "SELECT * FROM TIMESERIES1MIN",
+                "mode": "timestamp",
+                "timestamp.column.name": "KEY",
+                "topic.prefix": "PRGS1MIN"
+        }
+}
